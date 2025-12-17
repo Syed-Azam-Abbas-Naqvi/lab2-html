@@ -1,0 +1,325 @@
+h1 {
+  font-family: 'Georgia', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #0404f5 !important;
+}
+
+h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: #0044ff !important;
+}
+
+h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #0073ff !important;
+}
+
+p {
+  font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: #e10c0c !important;
+}
+
+
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: all 3.6s ease;
+}
+
+a:hover {
+  color: #f40808;
+  text-decoration: underline;
+  text-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+a:active {
+  color: #de0000;
+  transform: scale(0.98);
+}
+
+
+.btn, button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: rgb(230, 14, 14);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn:hover, button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.btn:active, button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+
+section {
+  margin-bottom: 64px;
+  padding: 48px 0;
+}
+
+
+.about-section,
+.resume-item,
+.portfolio-item {
+  border: 2px solid #e8f4f8;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 24px rgba(52, 152, 219, 0.15);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover,
+.resume-item:hover,
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(52, 152, 219, 0.25);
+}
+
+
+.service-item {
+  border-left: 4px solid #3498db;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  background-color: #ecf9ff;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.1);
+}
+
+
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+  border-bottom: 3px solid #ffd700;
+}
+
+.navmenu a {
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navmenu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.navmenu a:active,
+.navmenu a.active {
+  background-color: rgba(255, 215, 0, 0.3);
+}
+
+
+
+.badge,
+.profile-badge {
+  background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  display: inline-block;
+}
+
+
+.resume-item,
+.resume-item h4,
+.resume-item h5,
+.resume-item p,
+.resume-item ul,
+.resume-item li,
+.resume-item em {
+  color: #000000 !important;
+}
+
+.resume .resume-title {
+  color: #0073ff !important;
+}
+
+.resume-item h5 {
+  color: #333333 !important;
+  font-weight: 600;
+}
+
+#resume .section-title h2 {
+  color: #0044ff !important;
+}
+
+
+ol.custom-list {
+  list-style: none;
+  counter-reset: item;
+  padding-left: 0;
+}
+
+ol.custom-list li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+
+ol.custom-list li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+ul.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.custom-list li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 15px;
+}
+
+ul.custom-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2ecc71;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+ul.custom-list ul {
+  margin-top: 10px;
+}
+
+ul.custom-list ul li::before {
+  content: "→";
+  color: #3498db;
+}
+
+
+
+table.custom-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+table.custom-table thead tr {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+table.custom-table thead th {
+  padding: 18px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+
+table.custom-table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+table.custom-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+
+table.custom-table tbody tr:hover {
+  background-color: #e3f2fd;
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+
+table.custom-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #2c3e50;
+}
+
+table.custom-table td.number {
+  text-align: right;
+  font-weight: 600;
+  color: #000000;
+}
+
+
+table.custom-table td.text {
+  text-align: left;
+}
+
+@keyframes fadeInSmooth {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Wiggle hover animation */
+@keyframes hoverWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+/* Apply fade-in to hero text & images */
+.hero-text,
+.profile-container,
+.section-title,
+.about-section,
+.resume-item {
+  animation: fadeInSmooth 1.2s ease forwards;
+  opacity: 0;
+}
+
+/* Buttons wiggle on hover */
+.btn:hover {
+  animation: hoverWiggle 0.4s ease;
+}
