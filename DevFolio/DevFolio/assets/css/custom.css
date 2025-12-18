@@ -157,11 +157,7 @@ td.number {
 }
 
 
-/* =========================
-   CSS ANIMATIONS
-   ========================= */
 
-/* Fade-in animation for sections */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -177,7 +173,6 @@ main section {
   animation: fadeIn 1s ease-in;
 }
 
-/* Button hover animation */
 @keyframes buttonPop {
   from {
     transform: scale(1);
