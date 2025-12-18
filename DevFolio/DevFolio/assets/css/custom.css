@@ -1,167 +1,205 @@
-
-
-h1 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 15px;
+/* ================================
+   GLOBAL OVERRIDES
+================================ */
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #9333ea;
+  --accent-color: #f59e0b;
+  --text-dark: #1f2937;
 }
 
-h2 {
-  font-size: 26px;
-  margin-bottom: 12px;
+body {
+  color: var(--text-dark);
 }
 
-h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+/* ================================
+   HEADER & NAVBAR
+================================ */
+.header {
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 12px;
+.sitename {
+  color: #fff;
+  font-weight: 800;
 }
 
-/* =========================
-   2. LINKS & BUTTONS
-   ========================= */
-
-a {
-  color: blue;
-  text-decoration: none;
+.navmenu a {
+  color: #fff !important;
+  font-weight: 600;
+  position: relative;
 }
 
-a:hover {
-  color: darkblue;
-  text-decoration: underline;
+.navmenu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
 }
 
-a:active {
-  color: green;
-}
-
-button {
-  background-color: blue;
-  color: white;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: darkblue;
-}
-
-button:active {
-  background-color: green;
-}
-
-/* =========================
-   3. SPACING & BLOCKS
-   ========================= */
-
-section {
-  padding: 20px;
-  margin-bottom: 30px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.content {
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* =========================
-   4. COMPONENTS (NAVBAR + ALERT)
-   ========================= */
-
-.navbar {
-  background-color: #222;
-  padding: 10px;
-}
-
-.navbar a {
-  color: white;
-  margin-right: 15px;
-}
-
-.navbar a:hover {
-  color: lightgray;
-}
-
-.alert {
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-}
-
-.alert-success {
-  background-color: #d4edda;
-  color: #155724;
-}
-
-.alert-warning {
-  background-color: #fff3cd;
-  color: #856404;
-}
-
-/* =========================
-   OPTIONAL: LIST STYLING
-   ========================= */
-
-ul {
-  list-style-type: square;
-  margin-left: 20px;
-}
-
-ol {
-  margin-left: 20px;
-}
-
-ol li {
-  margin-bottom: 8px;
-}
-
-/* =========================
-   OPTIONAL: TABLE STYLING
-   ========================= */
-
-table {
+.navmenu a:hover::after,
+.navmenu a.active::after {
   width: 100%;
-  border-collapse: collapse;
 }
 
-th {
-  background-color: #333;
-  color: white;
-  padding: 10px;
+/* ================================
+   HERO SECTION
+================================ */
+.hero {
+  position: relative;
+  overflow: hidden;
 }
 
-td {
-  padding: 10px;
-  border: 1px solid #ccc;
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+.hero h2,
+.hero p {
+  position: relative;
+  z-index: 2;
+  color: #fff;
 }
 
-tr:hover {
-  background-color: #ddd;
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 800;
 }
 
-td.number {
-  text-align: right;
+.hero .typed {
+  color: var(--accent-color);
+  font-weight: 600;
 }
 
+/* ================================
+   SECTION TITLES
+================================ */
+.section-title h2,
+.section-title h4 {
+  font-weight: 800;
+  color: var(--primary-color);
+}
 
+.section-title p {
+  max-width: 650px;
+  margin: auto;
+}
 
-@keyframes fadeIn {
+/* ================================
+   ABOUT SECTION
+================================ */
+.about img {
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.about-info p strong {
+  color: var(--primary-color);
+}
+
+.skills-content .progress-bar {
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+}
+
+/* ================================
+   RESUME
+================================ */
+.resume-item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.resume-item:hover {
+  transform: translateY(-6px);
+}
+
+.resume-title {
+  color: var(--secondary-color);
+}
+
+/* ================================
+   SERVICES
+================================ */
+.service-item {
+  border-radius: 18px;
+  padding: 32px 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+}
+
+.service-item .icon i {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+/* ================================
+   PORTFOLIO
+================================ */
+.portfolio-item {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.08);
+}
+
+.portfolio-info {
+  background: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.2)
+  );
+}
+
+/* ================================
+   STATS
+================================ */
+.stats {
+  color: #fff;
+}
+
+.stats-item span {
+  color: var(--accent-color);
+  font-weight: 800;
+}
+
+/* ================================
+   TESTIMONIALS
+================================ */
+.testimonial-item {
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+@keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(25px);
   }
   to {
     opacity: 1;
@@ -169,49 +207,15 @@ td.number {
   }
 }
 
-main section {
-  animation: fadeIn 1s ease-in;
+.section {
+  animation: fadeUp 0.8s ease both;
 }
 
-@keyframes buttonPop {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.05);
-  }
-}
-
-button:hover {
-  animation: buttonPop 0.3s forwards;
-}
-
-/* =========================
-   CSS LOADER (SPINNER)
-   ========================= */
-
-.loader {
-  width: 50px;
-  height: 50px;
-  border: 6px solid #ccc;
-  border-top: 6px solid blue;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: 30px auto;
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* =========================
-   ACCESSIBILITY
-   ========================= */
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none;
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.2rem;
   }
 }
