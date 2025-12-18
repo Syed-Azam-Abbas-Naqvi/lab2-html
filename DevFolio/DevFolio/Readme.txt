@@ -1,6 +1,6 @@
 Thanks for downloading this template!
 
-Template Name: DevFolio
-Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+Template Name: SnapFolio
+Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
 Author: BootstrapMade.com
 License: https://bootstrapmade.com/license/
