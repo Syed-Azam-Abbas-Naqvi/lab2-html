@@ -1,242 +1,222 @@
-/* ================================
-   1. TYPOGRAPHY SYSTEM
-   ================================ */
 
-:root {
-  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
-  --font-serif: "Merriweather", Georgia, serif;
 
-  --text-dark: #1f2933;
-  --text-muted: #6b7280;
-  --primary: #2563eb;
-  --primary-hover: #1e40af;
-  --accent: #10b981;
-
-  --space-1: 0.5rem;
-  --space-2: 1rem;
-  --space-3: 1.5rem;
-  --space-4: 2.5rem;
-
-  --radius: 10px;
-}
-
-/* Headings */
 h1 {
-  font-family: var(--font-serif);
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: var(--space-3);
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 h2 {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: var(--space-2);
+  font-size: 26px;
+  margin-bottom: 12px;
 }
 
 h3 {
-  font-family: var(--font-sans);
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  margin-bottom: var(--space-1);
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-/* Paragraphs */
 p {
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--text-dark);
-  margin-bottom: var(--space-2);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 12px;
 }
 
-/* ================================
-   2. INTERACTIVE ELEMENTS
-   ================================ */
+/* =========================
+   2. LINKS & BUTTONS
+   ========================= */
 
 a {
-  color: var(--primary);
+  color: blue;
   text-decoration: none;
-  font-weight: 500;
 }
 
 a:hover {
-  color: var(--primary-hover);
+  color: darkblue;
   text-decoration: underline;
 }
 
 a:active {
-  color: var(--accent);
+  color: green;
 }
 
-button,
-.btn {
-  background-color: var(--primary);
-  color: #ffffff;
+button {
+  background-color: blue;
+  color: white;
+  padding: 8px 15px;
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: var(--radius);
-  font-weight: 600;
-  cursor: pointer;
+  border-radius: 5px;
 }
 
-button:hover,
-.btn:hover {
-  background-color: var(--primary-hover);
+button:hover {
+  background-color: darkblue;
 }
 
-button:active,
-.btn:active {
-  background-color: var(--accent);
+button:active {
+  background-color: green;
 }
 
-/* ================================
-   3. SPACING SCALE & SURFACES
-   ================================ */
+/* =========================
+   3. SPACING & BLOCKS
+   ========================= */
 
-section,
-.article,
-.content-block {
-  padding: var(--space-3);
-  margin-bottom: var(--space-4);
-  background: #ffffff;
-  border-radius: var(--radius);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+section {
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-.container {
-  padding: var(--space-4);
+.content {
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.card {
-  padding: var(--space-2);
-  border-radius: var(--radius);
-  border: 1px solid #e5e7eb;
-}
+/* =========================
+   4. COMPONENTS (NAVBAR + ALERT)
+   ========================= */
 
-/* ================================
-   4. TWO COMPONENTS RESTYLED
-   (Navbar + Alerts)
-   ================================ */
-
-/* Navbar */
 .navbar {
-  background-color: #111827;
-  padding: var(--space-2);
+  background-color: #222;
+  padding: 10px;
 }
 
 .navbar a {
-  color: #e5e7eb;
-  margin-right: var(--space-2);
+  color: white;
+  margin-right: 15px;
 }
 
 .navbar a:hover {
-  color: #ffffff;
+  color: lightgray;
 }
 
-/* Alerts */
 .alert {
-  padding: var(--space-2);
-  border-radius: var(--radius);
-  font-weight: 500;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
 }
 
 .alert-success {
-  background-color: #ecfdf5;
-  color: #065f46;
-  border-left: 6px solid #10b981;
+  background-color: #d4edda;
+  color: #155724;
 }
 
 .alert-warning {
-  background-color: #fffbeb;
-  color: #92400e;
-  border-left: 6px solid #f59e0b;
+  background-color: #fff3cd;
+  color: #856404;
 }
 
-/* ================================
-   OPTIONAL TASK A: STYLED LISTS
-   ================================ */
+/* =========================
+   OPTIONAL: LIST STYLING
+   ========================= */
 
-/* Unordered list */
-ul.custom-list {
-  list-style: none;
-  padding-left: 0;
+ul {
+  list-style-type: square;
+  margin-left: 20px;
 }
 
-ul.custom-list li {
-  position: relative;
-  padding-left: 1.8rem;
-  margin-bottom: var(--space-1);
+ol {
+  margin-left: 20px;
 }
 
-ul.custom-list li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: var(--primary);
-  font-weight: bold;
+ol li {
+  margin-bottom: 8px;
 }
 
-/* Ordered list with counters */
-ol.counter-list {
-  counter-reset: step;
-  list-style: none;
-  padding-left: 0;
-}
-
-ol.counter-list li {
-  counter-increment: step;
-  margin-bottom: var(--space-1);
-  padding-left: 2rem;
-  position: relative;
-}
-
-ol.counter-list li::before {
-  content: counter(step) ".";
-  position: absolute;
-  left: 0;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-/* Nested list */
-ol.counter-list li ol {
-  margin-top: var(--space-1);
-  padding-left: var(--space-3);
-}
-
-/* ================================
-   OPTIONAL TASK B: TABLES
-   ================================ */
+/* =========================
+   OPTIONAL: TABLE STYLING
+   ========================= */
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: var(--space-3);
 }
 
-thead {
-  background-color: #1f2933;
-  color: #ffffff;
+th {
+  background-color: #333;
+  color: white;
+  padding: 10px;
 }
 
-th,
 td {
-  padding: 0.75rem 1rem;
-  text-align: left;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
 
-td.numeric {
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+td.number {
   text-align: right;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f9fafb;
+
+/* =========================
+   CSS ANIMATIONS
+   ========================= */
+
+/* Fade-in animation for sections */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-tbody tr:hover {
-  background-color: #e5e7eb;
+main section {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Button hover animation */
+@keyframes buttonPop {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+button:hover {
+  animation: buttonPop 0.3s forwards;
+}
+
+/* =========================
+   CSS LOADER (SPINNER)
+   ========================= */
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top: 6px solid blue;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 30px auto;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+  }
 }
