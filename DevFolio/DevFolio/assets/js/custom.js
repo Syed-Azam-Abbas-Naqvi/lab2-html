@@ -8,7 +8,7 @@
     return words[Math.floor(Math.random() * words.length)];
   }
 
-  // ---------- UI Feedback Helpers ----------
+  
   function setError(el, msg) {
     el.classList.add("is-invalid");
     el.classList.remove("is-valid");
@@ -165,11 +165,11 @@ avgEl.textContent = `${f.firstName.value} ${f.lastName.value}: ${avg}`;
 // Color coding
 const avgNumber = parseFloat(avg);
 if (avgNumber < 4) {
-  avgEl.style.color = "#df1529";        // red
+  avgEl.style.color = "#dc091eff";        // red
 } else if (avgNumber < 7) {
-  avgEl.style.color = "#ff7e00";        // orange
+  avgEl.style.color = "#f58413ff";        // orange
 } else {
-  avgEl.style.color = "#00c875";        // green
+  avgEl.style.color = "#0b794bff";        // green
 }
 
 results.appendChild(avgEl);
